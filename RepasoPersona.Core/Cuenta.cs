@@ -3,8 +3,13 @@ namespace RepasoPersona.Core
 {
     public class Cuenta
     {
-        public double Saldo {get; private set;}
+        private static int _contador = 0;
         public int Cbu {get; private set;}
-        public double Efectivo {get; private set;} 
+        public Cuenta()
+        {
+            Cbu = ++_contador;
+
+        }
+
     }
 }
